@@ -32,13 +32,17 @@
                                                     <constraint firstAttribute="width" constant="40" id="LHg-S6-KIz"/>
                                                 </constraints>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal" image="location.circle.fill" catalog="system"/>
+                                                <state key="normal" image="location.circle.fill" catalog="system">
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font">
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                                    </preferredSymbolConfiguration>
+                                                </state>
                                             </button>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search" textAlignment="right" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="YGc-2q-png">
                                                 <rect key="frame" x="50" y="0.0" width="254" height="40"/>
                                                 <color key="backgroundColor" systemColor="systemFillColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="go"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Low-aj-unp">
                                                 <rect key="frame" x="314" y="0.0" width="40" height="40"/>
@@ -48,7 +52,14 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="34"/>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal" image="magnifyingglass" catalog="system"/>
+                                                <state key="normal" image="magnifyingglass" catalog="system">
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font">
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                                    </preferredSymbolConfiguration>
+                                                </state>
+                                                <connections>
+                                                    <action selector="searchPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fsX-Ra-Piq"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -115,6 +126,7 @@
                     <connections>
                         <outlet property="cityLabel" destination="CNw-fd-Cb9" id="mLl-Mf-HNj"/>
                         <outlet property="conditionImageView" destination="5p8-PP-tra" id="gHH-kg-wev"/>
+                        <outlet property="searchTextField" destination="YGc-2q-png" id="nBK-wB-9ME"/>
                         <outlet property="temperatureLabel" destination="o09-56-QGm" id="GDP-is-oNT"/>
                     </connections>
                 </viewController>
