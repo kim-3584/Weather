@@ -15,6 +15,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var searchTextField: UITextField!
     
+    var weatherManager = WeatherManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // 텍스트필드가 무슨 일이 일어나는지 뷰컨트롤러에 알린다. 텍스트필드가 진행상황을 전달
@@ -42,8 +44,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         
-        let city = searchTextField.text
-        cityLabel.text = city
+        if let city = searchTextField.text {
+            weatherManager.fetchWeather(cityName: city)
+        }
+        
         searchTextField.text = ""
     }
     
