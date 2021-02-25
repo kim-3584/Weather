@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITextFieldDelegate {
+class ViewController: UIViewController, UITextFieldDelegate, WeatherManagerDelegate {
 
     
     @IBOutlet weak var temperatureLabel: UILabel!
@@ -21,6 +21,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         // 텍스트필드가 무슨 일이 일어나는지 뷰컨트롤러에 알린다. 텍스트필드가 진행상황을 전달
         searchTextField.delegate = self
+        weatherManager.delegate = self
         
     }
 
@@ -51,7 +52,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
         searchTextField.text = ""
     }
     
-    
+    func didUpdateWeather(weather: WeatherModel) {
+        print(weather.temperature)
+    }
 }
 
 
