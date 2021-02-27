@@ -11,3 +11,4 @@ Weather App
 
 - Protocol & Delegate Design Pattern
 
+- Core Location(위치 데이터 얻기)
