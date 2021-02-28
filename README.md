@@ -1,6 +1,8 @@
 # Weather
 Weather App
 
+- Storyboard
+
 - OpenWeather API & JSon & Networking
    1. Create a URL object
    2. Create a URLSession
