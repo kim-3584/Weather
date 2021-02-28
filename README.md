@@ -29,3 +29,6 @@ Weather App
    4. info.plist -> Privacy - Location When In Use Usage Description 추가 -> message 입력
    5. CLLocationManagerDelegate - locationManager - didUpdateLocations, didFailWithError
 
+
+<img width="388" alt="스크린샷 2021-02-28 오후 2 46 38" src="https://user-images.githubusercontent.com/68727819/109409197-f1663600-79d3-11eb-8503-f68e1cfdc791.png">
+
